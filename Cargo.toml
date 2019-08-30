@@ -3,6 +3,7 @@ authors = ["Nick Fitzgerald <fitzgen@gmail.com>"]
 categories = ["development-tools::testing"]
 description = "An RNG that generates 'random' numbers copied from a given buffer. INTENDED FOR TESTING AND FUZZING ONLY!!"
 edition = "2018"
+keywords = ["fuzzing", "structure-aware", "rng", "random"]
 license = "MIT/Apache-2.0"
 name = "bufrng"
 readme = "README.md"
