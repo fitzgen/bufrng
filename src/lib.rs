@@ -1,5 +1,8 @@
 /*!
 
+`BufRng` is a "random" number generator that simply yields pre-determined values
+from a buffer, and yields `0`s once the buffer is exhausted.
+
 <div align="center">
 
   <p>⚠⚠⚠</p>
@@ -11,10 +14,6 @@
   <p>⚠⚠⚠</p>
 
 </div>
-
-This crate provides the `BufRng` type, which is a "random" number generator that
-simply yields pre-determined values from a buffer, and yields `0`s once the
-buffer is exhausted.
 
 ## Why?
 

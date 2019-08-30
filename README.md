@@ -1,5 +1,13 @@
+[![](https://docs.rs/bufrng/badge.svg)](https://docs.rs/bufrng/)
+[![](https://img.shields.io/crates/v/bufrng.svg)](https://crates.io/crates/bufrng)
+[![](https://img.shields.io/crates/d/bufrng.svg)](https://crates.io/crates/bufrng)
+[![Build Status](https://dev.azure.com/fitzgen/bufrng/_apis/build/status/fitzgen.bufrng?branchName=master)](https://dev.azure.com/fitzgen/bufrng/_build/latest?definitionId=2&branchName=master)
+
 # `bufrng`
 
+
+`BufRng` is a "random" number generator that simply yields pre-determined values
+from a buffer, and yields `0`s once the buffer is exhausted.
 
 <div align="center">
 
@@ -12,10 +20,6 @@
   <p>⚠⚠⚠</p>
 
 </div>
-
-This crate provides the `BufRng` type, which is a "random" number generator that
-simply yields pre-determined values from a buffer, and yields `0`s once the
-buffer is exhausted.
 
 ### Why?
 
