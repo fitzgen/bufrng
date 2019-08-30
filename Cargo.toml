@@ -1,0 +1,16 @@
+[package]
+authors = ["Nick Fitzgerald <fitzgen@gmail.com>"]
+description = "An RNG that generates 'random' numbers copied from a given buffer. INTENDED FOR TESTING AND FUZZING ONLY!!"
+edition = "2018"
+license = "MIT/Apache-2.0"
+name = "bufrng"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand_core = "0.5.1"
+
+[dev-dependencies]
+rand = "0.7.0"
+quickcheck = "0.9.0"
