@@ -159,7 +159,6 @@ fuzz_target!(|data: &[u8]| {
  */
 
 use rand_core::{Error, RngCore};
-use std::iter;
 use std::slice;
 
 /// A "random" number generator that yields values from a given buffer (and then
@@ -167,7 +166,7 @@ use std::slice;
 ///
 /// See the module documentation for details.
 pub struct BufRng<'a> {
-    iter: iter::Chain<slice::Iter<'a, u8>, iter::Repeat<&'a u8>>,
+    iter: slice::Iter<'a, u8>,
 }
 
 impl BufRng<'_> {
@@ -192,18 +191,24 @@ impl BufRng<'_> {
     /// ```
     pub fn new(data: &[u8]) -> BufRng {
         BufRng {
-            iter: data.iter().chain(iter::repeat(&0)),
+            iter: data.iter(),
         }
+    }
+    
+    // Retrieve next byte from underlying iterator
+    // or zero if it is exhausted and convert it into u32.
+    fn next(&mut self) -> u32 {
+        self.iter.next().cloned().unwrap_or(0).into()
     }
 }
 
 // NB: all `RngCore` get a blanket `Rng` implementation.
 impl RngCore for BufRng<'_> {
     fn next_u32(&mut self) -> u32 {
-        let a = *self.iter.next().unwrap() as u32;
-        let b = *self.iter.next().unwrap() as u32;
-        let c = *self.iter.next().unwrap() as u32;
-        let d = *self.iter.next().unwrap() as u32;
+        let a = self.next();
+        let b = self.next();
+        let c = self.next();
+        let d = self.next();
         (a << 24) | (b << 16) | (c << 8) | d
     }
 
