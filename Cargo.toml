@@ -13,7 +13,7 @@ version = "1.0.2"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rand_core = "0.5.1"
+rand_core = "0.6.0"
 
 [dev-dependencies]
 rand = "0.7.0"
