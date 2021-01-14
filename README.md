@@ -1,4 +1,4 @@
-Since this crate was written, [the `arbitrary` crate](https://crates.io/crates/arbitrary) has vastly improved. It uses a better approach to translating raw, fuzzer-provided bytes into property-testing style tests, and is where I am investing my time now. As such, this crate is archived, and you should use that one instead.
+**Since this crate was written, [the `arbitrary` crate](https://crates.io/crates/arbitrary) has vastly improved. It uses a better approach to translating raw, fuzzer-provided bytes into property-testing style tests, and is where I am investing my time now. As such, this crate is archived, and you should use that one instead.**
 
 -------------------------------------------------------------------
 
