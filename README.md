@@ -1,7 +1,6 @@
-[![](https://docs.rs/bufrng/badge.svg)](https://docs.rs/bufrng/)
-[![](https://img.shields.io/crates/v/bufrng.svg)](https://crates.io/crates/bufrng)
-[![](https://img.shields.io/crates/d/bufrng.svg)](https://crates.io/crates/bufrng)
-[![Build Status](https://dev.azure.com/fitzgen/bufrng/_apis/build/status/fitzgen.bufrng?branchName=master)](https://dev.azure.com/fitzgen/bufrng/_build/latest?definitionId=2&branchName=master)
+Since this crate was written, [the `arbitrary` crate](https://crates.io/crates/arbitrary) has vastly improved. It uses a better approach to translating raw, fuzzer-provided bytes into property-testing style tests, and is where I am investing my time now. As such, this crate is archived, and you should use that one instead.
+
+-------------------------------------------------------------------
 
 # `bufrng`
 
